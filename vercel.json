@@ -1,12 +1,6 @@
 {
   "version": 3,
-  "builds": [
-    {
-      "src": "mywork/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist"
-      }
-    }
-  ]
+  "installCommand": "cd mywork && npm install",
+  "buildCommand": "cd mywork && npm run build",
+  "outputDirectory": "mywork/dist"
 }
