@@ -1,0 +1,124 @@
+@import '../../../../styles/common.css';
+
+/* ========================================================================== */
+/* SKILLS SECTION - MOBILE FIRST ===== */
+/* ========================================================================== */
+
+.skillsSection {
+  width: 100%;
+  background: var(--color-white);
+  padding: var(--space-10) var(--space-lg);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+/* Note: .sectionHeading is now defined in common.css */
+
+
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+  justify-items: center;
+  width: 100%;
+  max-width: 100%;
+}
+
+.skillCard {
+  background: transparent;
+  border-radius: var(--radius-lg);
+  box-shadow: none;
+  padding: var(--space-6) var(--space-md);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--space-4);
+  width: 100%;
+  max-width: 100%;
+  transition: box-shadow var(--transition-fast), transform var(--transition-fast);
+  border: none;
+}
+
+.skillCard:hover {
+  transform: translateY(var(--transform-button-hover));
+}
+
+.skillIcon {
+  font-size: var(--font-size-3xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--size-64);
+  width: var(--size-64);
+  color: var(--color-dark);
+  flex-shrink: 0;
+}
+
+.skillLabel {
+  color: var(--color-dark);
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-snug);
+  letter-spacing: var(--letter-spacing-normal);
+  margin: 0;
+}
+
+/* ========================================================================== */
+/* RESPONSIVE BREAKPOINTS - MOBILE FIRST ===== */
+/* ========================================================================== */
+
+/* TABLET - 768px and above */
+@media (min-width: 768px) {
+  /* Note: .sectionHeading media queries are now in common.css */
+
+  .skillsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+    justify-items: center;
+  }
+
+  .skillCard {
+    max-width: 280px;
+    padding: var(--space-6) var(--space-md);
+    gap: var(--space-4);
+  }
+
+  .skillIcon {
+    height: var(--size-64);
+    width: var(--size-64);
+  }
+}
+
+/* DESKTOP - 1024px and above */
+@media (min-width: 1024px) {
+  .skillsGrid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-4);
+    margin: 0 auto;
+    justify-items: center;
+  }
+
+  .skillCard {
+    max-width: 280px;
+    padding: var(--space-6) var(--space-md);
+    gap: var(--space-4);
+  }
+
+  .skillIcon {
+    height: var(--size-64);
+    width: var(--size-64);
+    font-size: var(--font-size-3xl);
+  }
+
+  .skillLabel {
+    font-size: var(--font-size-lg);
+  }
+}

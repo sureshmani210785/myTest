@@ -1,0 +1,186 @@
+@import '../../../../styles/common.css';
+
+/* ========================================================================== */
+/* OVERVIEW SECTION - MOBILE FIRST ===== */
+/* ========================================================================== */
+
+.overviewSection {
+  width: 100%;
+  background: var(--color-white);
+  padding: var(--space-10) var(--space-lg);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.overviewRow {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-10);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.overviewTextCol {
+  flex: 1 1 100%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.overviewDesc {
+  font-size: var(--font-size-md);
+  color: var(--color-gray);
+  line-height: var(--line-height-relaxed);
+  text-align: left;
+  font-weight: var(--font-weight-normal);
+  margin-top: 0;
+  margin-bottom: var(--space-lg);
+}
+
+.overviewList {
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  align-items: flex-start;
+  margin: 0;
+}
+
+.overviewList li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--font-size-lg);
+  color: var(--color-gray);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-relaxed);
+}
+
+.overviewCheck {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--size-24);
+  height: var(--size-24);
+  background: var(--color-dark);
+  border-radius: var(--radius-full);
+  color: var(--color-white);
+  font-size: var(--font-size-sm);
+  flex-shrink: 0;
+}
+
+.overviewCheck i {
+  font-size: var(--size-14);
+}
+
+.overviewStatsCol {
+  flex: 1 1 100%;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overviewStatsGrid {
+  background: var(--color-bg-light-3);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: var(--space-6);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.overviewStatCard {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: none;
+  padding: var(--space-8) var(--space-6);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 120px;
+}
+
+.overviewStatValue {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-md);
+  color: var(--color-dark);
+  line-height: var(--line-height-tight);
+}
+
+.overviewStatLabel {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-normal);
+}
+
+/* ========================================================================== */
+/* RESPONSIVE BREAKPOINTS - MOBILE FIRST ===== */
+/* ========================================================================== */
+
+/* TABLET - 768px and above */
+@media (min-width: 768px) {
+  .overviewRow {
+    flex-direction: row;
+    gap: var(--space-10);
+    align-items: flex-start;
+  }
+
+  .overviewTextCol {
+    flex: 1 1 50%;
+    min-width: 0;
+  }
+
+  .overviewStatsCol {
+    flex: 1 1 50%;
+    min-width: 0;
+  }
+
+  .overviewStatsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-8);
+    padding: var(--space-10) var(--space-10);
+    width: 100%;
+  }
+}
+
+/* DESKTOP - 1024px and above */
+@media (min-width: 1024px) {
+  .overviewRow {
+    gap: var(--space-10);
+    max-width: var(--width-1240);
+    margin: 0 auto;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .overviewTextCol {
+    flex: 0 1 45%;
+    min-width: 0;
+  }
+
+  .overviewStatsCol {
+    flex: 0 1 55%;
+    min-width: 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .overviewStatsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+  }
+}

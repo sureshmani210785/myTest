@@ -1,0 +1,751 @@
+@import '../../../../styles/common.css';
+
+/* ========================================================================== */
+/* HERO SECTION - MOBILE FIRST RESPONSIVE DESIGN */
+/* ========================================================================== */
+
+.heroSection {
+  width: 100%;
+  background: linear-gradient(var(--gradient-angle-135), #3d3d3d 0%, #2a2a2a 100%);
+  padding: var(--space-6) var(--space-4);
+  overflow: hidden;
+  min-height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroContainer {
+  max-width: var(--width-xl);
+  margin: 0 auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+  align-items: stretch;
+}
+
+/* ========================================================================== */
+/* HERO CONTENT - MOBILE FIRST */
+/* ========================================================================== */
+
+.heroContent {
+  text-align: left;
+  color: var(--color-white);
+  order: 2;
+}
+
+.heroBadge {
+  display: inline-block;
+  background: rgba(201, 168, 85, 0.15);
+  border: 1.5px solid var(--color-accent-gold);
+  color: var(--color-accent-gold);
+  padding: var(--space-1) var(--space-4);
+  border-radius: var(--radius-lg);
+  font-size: var(--size-font-xs);
+  font-weight: var(--font-weight-extrabold);
+  letter-spacing: var(--letter-spacing-wider);
+  margin-bottom: var(--space-4);
+  text-transform: uppercase;
+}
+
+.heroTitle {
+  font-size: var(--size-28);
+  font-weight: var(--font-weight-extrabold);
+  margin-bottom: var(--space-4);
+  color: var(--color-white);
+  letter-spacing: var(--letter-spacing-tight);
+  line-height: 1.2;
+  word-spacing: 0.05em;
+}
+
+.highlight {
+  color: var(--color-accent-gold);
+  font-weight: var(--font-weight-extrabold);
+}
+
+.heroDescription {
+  font-size: var(--size-font-sm);
+  color: #bfc6d1;
+  line-height: 1.6;
+  margin-bottom: var(--space-4);
+  max-width: 100%;
+  font-weight: var(--font-weight-normal);
+}
+
+/* ========================================================================== */
+/* EXPERIENCE BOX - MOBILE FIRST */
+/* ========================================================================== */
+
+.experienceBox {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  background: rgba(196, 30, 58, 0.3);
+  border: 1.5px solid #5d1428;
+  padding: var(--space-4) var(--space-5);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-5);
+  margin-top: var(--space-5);
+}
+
+.experienceIcon {
+  font-size: var(--size-18);
+  color: var(--color-white);
+  width: var(--size-44);
+  height: var(--size-44);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-accent);
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+}
+
+.experienceContent {
+  flex: 1;
+}
+
+.experienceLabel {
+  font-size: var(--size-font-xs);
+  color: #a0a0a0;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.5px;
+  margin-bottom: var(--margin-xs);
+  text-transform: uppercase;
+}
+
+.experienceTitle {
+  font-size: var(--size-font-sm);
+  color: var(--color-white);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.3;
+}
+
+/* ========================================================================== */
+/* HERO BUTTONS - MOBILE FIRST */
+/* ========================================================================== */
+
+.heroButtons {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  margin-top: var(--space-5);
+  margin-bottom: var(--space-5);
+  flex-direction: column;
+}
+
+.primaryBtn,
+.secondaryBtn {
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-lg);
+  font-size: var(--size-font-sm);
+  font-weight: var(--font-weight-bold);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  width: 100%;
+  border: none;
+  letter-spacing: 0.3px;
+  text-align: center;
+}
+
+.primaryBtn {
+  background: var(--color-white);
+  color: var(--color-black);
+}
+
+.primaryBtn:hover {
+  background: #f0f0f0;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.primaryBtn:active {
+  transform: translateY(0);
+}
+
+.secondaryBtn {
+  background: transparent;
+  color: var(--color-white);
+  border: 1.5px solid var(--color-white);
+}
+
+.secondaryBtn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1.5px solid var(--color-accent-gold);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  color: var(--color-white);
+}
+
+.secondaryBtn:active {
+  transform: translateY(0);
+}
+
+/* ========================================================================== */
+/* HERO STATS - MOBILE FIRST */
+/* ========================================================================== */
+
+.heroStats {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+  padding-top: var(--space-5);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: var(--space-5);
+}
+
+.heroStatItem {
+  text-align: left;
+}
+
+.heroStatNumber {
+  font-size: var(--size-28);
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-white);
+  margin-bottom: var(--margin-xs);
+  line-height: 1;
+}
+
+.heroStatLabel {
+  font-size: var(--size-font-xs);
+  color: #bfc6d1;
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.3px;
+}
+
+/* ========================================================================== */
+/* HERO CARDS CONTAINER - MOBILE FIRST */
+/* ========================================================================== */
+
+.heroCardsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  order: 1;
+}
+
+/* ========================================================================== */
+/* JOB OFFER CARD - MOBILE FIRST */
+/* ========================================================================== */
+
+.jobOfferCard {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4) var(--space-5);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  box-shadow: var(--shadow-md);
+  animation: slideInRight var(--transition-slow) ease-out;
+}
+
+.jobOfferIcon {
+  font-size: var(--size-20);
+  width: var(--size-44);
+  height: var(--size-44);
+  background: linear-gradient(var(--gradient-angle-135), var(--color-accent) 0%, #b8173a 100%);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+}
+
+.jobOfferContent {
+  flex: 1;
+}
+
+.jobOfferTitle {
+  font-size: var(--size-font-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-black);
+  margin: 0 0 var(--margin-xs) 0;
+  line-height: 1.3;
+}
+
+.jobOfferSubtitle {
+  font-size: var(--size-font-xs);
+  color: #a0a0a0;
+  margin: 0;
+  font-weight: var(--font-weight-medium);
+}
+
+/* ========================================================================== */
+/* DASHBOARD CARD - MOBILE FIRST */
+/* ========================================================================== */
+
+.dashboardCard {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  box-shadow: var(--shadow-md);
+}
+
+.dashboardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-3);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--color-border-light);
+  gap: var(--space-3);
+}
+
+.dashboardTitle {
+  font-size: var(--size-font-md);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-black);
+  margin: 0;
+}
+
+.activeBadge {
+  background: #d1f4e3;
+  color: var(--color-green);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-xs);
+  font-size: var(--size-font-xs);
+  font-weight: var(--font-weight-bold);
+  white-space: nowrap;
+}
+
+.dashboardContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.currentProject {
+  padding: var(--space-3);
+  background: #fff7cc;
+  border-radius: var(--radius-md);
+}
+
+.projectLabel {
+  font-size: var(--size-font-xs);
+  color: #a0a0a0;
+  letter-spacing: 0.3px;
+  margin-bottom: var(--margin-xs);
+  text-transform: uppercase;
+  font-weight: var(--font-weight-semibold);
+}
+
+.projectName {
+  font-size: var(--size-font-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-accent);
+  margin-bottom: var(--space-2);
+  line-height: 1.3;
+}
+
+.progressBar {
+  height: 6px;
+  background: #f0f0f0;
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progressBar::after {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 60%;
+  background: linear-gradient(var(--gradient-angle-90), var(--color-accent-gold) 0%, #d5ad34 100%);
+  border-radius: 3px;
+}
+
+.dashboardStats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-2);
+  width: 100%;
+}
+
+.dashboardStat {
+  background: #fff7cc;
+  padding: var(--space-3) var(--space-2);
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+.statValue {
+  font-size: var(--size-18);
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-black);
+  line-height: 1;
+  display: block;
+  margin-bottom: var(--margin-xs);
+  letter-spacing: 0.3px;
+}
+
+.statCount {
+  font-size: var(--size-font-xs);
+  color: #a0a0a0;
+  font-weight: var(--font-weight-semibold);
+}
+
+.statName {
+  font-size: var(--size-font-xs);
+  color: #a0a0a0;
+  margin-top: var(--margin-xs);
+  font-weight: var(--font-weight-semibold);
+  display: block;
+  line-height: 1.3;
+  letter-spacing: 0.2px;
+}
+
+/* ========================================================================== */
+/* ANIMATIONS */
+/* ========================================================================== */
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ========================================================================== */
+/* SMALL DEVICES - 480px */
+/* ========================================================================== */
+
+@media (min-width: 480px) {
+  .heroSection {
+    padding: var(--space-6) var(--space-5);
+  }
+
+  .heroTitle {
+    font-size: var(--size-32);
+  }
+
+  .heroDescription {
+    font-size: var(--size-font-sm);
+  }
+
+  .heroButtons {
+    flex-direction: row;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    width: auto;
+  }
+
+  .heroStats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-3);
+  }
+
+  .heroStatNumber {
+    font-size: var(--size-30);
+  }
+}
+
+/* ========================================================================== */
+/* TABLET - 768px */
+/* ========================================================================== */
+
+@media (min-width: 768px) {
+  .heroSection {
+    padding: var(--space-8) var(--space-6);
+    min-height: 90vh;
+    align-items: center;
+  }
+
+  .heroContainer {
+    grid-template-columns: 1.2fr 1fr;
+    gap: var(--space-6);
+    align-items: flex-start;
+  }
+
+  .heroContent {
+    order: 1;
+  }
+
+  .heroCardsContainer {
+    order: 2;
+  }
+
+  .heroBadge {
+    padding: var(--space-2) var(--space-5);
+    font-size: var(--size-font-xs);
+    margin-bottom: var(--space-5);
+  }
+
+  .heroTitle {
+    font-size: var(--size-40);
+    margin-bottom: var(--space-5);
+  }
+
+  .heroDescription {
+    font-size: var(--size-font-md);
+    margin-bottom: var(--space-5);
+  }
+
+  .experienceBox {
+    padding: var(--space-5) var(--space-6);
+    margin-bottom: var(--space-5);
+    margin-top: var(--space-5);
+  }
+
+  .experienceIcon {
+    width: var(--size-48);
+    height: var(--size-48);
+    font-size: var(--size-24);
+  }
+
+  .experienceTitle {
+    font-size: var(--size-font-md);
+  }
+
+  .heroButtons {
+    flex-direction: row;
+    gap: var(--space-4);
+    margin-top: var(--space-6);
+    margin-bottom: var(--space-7);
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    width: auto;
+    padding: var(--space-3) var(--space-7);
+    font-size: var(--size-font-sm);
+  }
+
+  .heroStats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+  }
+
+  .heroStatNumber {
+    font-size: var(--size-36);
+  }
+
+  .heroStatLabel {
+    font-size: var(--size-font-sm);
+  }
+
+  .jobOfferCard {
+    padding: var(--space-5) var(--space-6);
+    gap: var(--space-4);
+  }
+
+  .jobOfferIcon {
+    width: var(--size-48);
+    height: var(--size-48);
+    font-size: var(--size-24);
+  }
+
+  .dashboardCard {
+    padding: var(--space-6);
+  }
+
+  .dashboardHeader {
+    margin-bottom: var(--space-4);
+    padding-bottom: var(--space-4);
+  }
+
+  .dashboardTitle {
+    font-size: var(--size-font-lg);
+  }
+}
+
+/* ========================================================================== */
+/* LARGE TABLET - 900px */
+/* ========================================================================== */
+
+@media (min-width: 900px) {
+  .heroSection {
+    padding: var(--space-9) var(--space-8);
+    min-height: 100vh;
+  }
+
+  .heroContainer {
+    gap: var(--space-8);
+  }
+
+  .heroBadge {
+    margin-bottom: var(--space-6);
+  }
+
+  .heroTitle {
+    font-size: var(--size-48);
+    margin-bottom: var(--space-6);
+  }
+
+  .heroDescription {
+    font-size: var(--size-18);
+    margin-bottom: var(--space-6);
+    line-height: 1.7;
+  }
+
+  .experienceBox {
+    margin-top: var(--space-6);
+    margin-bottom: var(--space-6);
+  }
+
+  .heroButtons {
+    margin-top: var(--space-6);
+    margin-bottom: var(--space-9);
+    gap: var(--space-5);
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    padding: var(--space-4) var(--space-8);
+  }
+
+  .heroStatNumber {
+    font-size: var(--size-44);
+  }
+
+  .jobOfferCard {
+    padding: var(--space-6) var(--space-8);
+  }
+
+  .dashboardCard {
+    padding: var(--space-7);
+  }
+
+  .heroCardsContainer {
+    gap: var(--space-7);
+  }
+}
+
+/* ========================================================================== */
+/* DESKTOP - 1024px */
+/* ========================================================================== */
+
+@media (min-width: 1024px) {
+  .heroSection {
+    padding: var(--space-9) var(--size-64);
+    min-height: 100vh;
+  }
+
+  .heroContainer {
+    grid-template-columns: 1.2fr 1fr;
+    gap: var(--space-10);
+  }
+
+  .heroBadge {
+    padding: var(--space-2) var(--space-5);
+    font-size: var(--size-font-sm);
+    margin-bottom: var(--space-6);
+  }
+
+  .heroTitle {
+    font-size: var(--size-56);
+    margin-bottom: var(--space-8);
+    line-height: 1.15;
+  }
+
+  .heroDescription {
+    font-size: var(--size-20);
+    margin-bottom: var(--space-8);
+    line-height: 1.8;
+  }
+
+  .experienceBox {
+    padding: var(--space-6) var(--space-8);
+    margin-top: var(--space-8);
+    margin-bottom: var(--space-8);
+    gap: var(--space-4);
+  }
+
+  .experienceIcon {
+    width: var(--size-56);
+    height: var(--size-56);
+    font-size: var(--size-28);
+  }
+
+  .experienceLabel {
+    font-size: var(--size-font-sm);
+  }
+
+  .experienceTitle {
+    font-size: var(--size-font-lg);
+  }
+
+  .heroButtons {
+    margin-top: var(--space-8);
+    margin-bottom: var(--space-10);
+    gap: var(--space-5);
+    flex-direction: row;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    padding: var(--space-4) var(--space-9);
+    font-size: var(--size-font-md);
+  }
+
+  .heroStats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-10);
+  }
+
+  .heroStatNumber {
+    font-size: var(--size-lg);
+    margin-bottom: var(--margin-sm);
+  }
+
+  .heroStatLabel {
+    font-size: var(--size-font-md);
+  }
+
+  .jobOfferCard {
+    padding: var(--space-6) var(--space-8);
+    gap: var(--space-5);
+  }
+
+  .jobOfferIcon {
+    width: var(--size-56);
+    height: var(--size-56);
+    font-size: var(--size-28);
+  }
+
+  .jobOfferTitle {
+    font-size: var(--size-font-lg);
+  }
+
+  .jobOfferSubtitle {
+    font-size: var(--size-font-sm);
+  }
+
+  .dashboardCard {
+    padding: var(--space-8);
+  }
+
+  .dashboardHeader {
+    margin-bottom: var(--space-6);
+    padding-bottom: var(--space-6);
+  }
+
+  .dashboardTitle {
+    font-size: var(--size-20);
+  }
+
+  .currentProject {
+    padding: var(--space-5);
+  }
+
+  .projectName {
+    font-size: var(--size-font-lg);
+  }
+
+  .progressBar {
+    height: 8px;
+  }
+
+  .statValue {
+    font-size: var(--size-28);
+  }
+}
+
+

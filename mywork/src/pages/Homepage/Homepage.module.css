@@ -1,0 +1,33 @@
+@import '../../styles/common.css';
+
+/* ========================================================================== */
+/* IMPORT ALL SECTION STYLES */
+/* ========================================================================== */
+@import './sections/styles/HeroSection.module.css';
+@import './sections/styles/KeyFeatures.module.css';
+@import './sections/styles/GrowthStats.module.css';
+@import './sections/styles/JourneySteps.module.css';
+@import './sections/styles/Batches.module.css';
+@import './sections/styles/Overview.module.css';
+@import './sections/styles/Certificate.module.css';
+@import './sections/styles/Skills.module.css';
+@import './sections/styles/Capstone.module.css';
+@import './sections/styles/Reviews.module.css';
+@import './sections/styles/Achievements.module.css';
+@import './sections/styles/Faq.module.css';
+@import './sections/styles/Branches.module.css';
+@import './sections/styles/Enterprise.module.css';
+
+/* ========================================================================== */
+/* HOMEPAGE PAGE-LEVEL STYLES */
+/* ========================================================================== */
+
+.homepageBg {
+  width: 100%;
+  background: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+}

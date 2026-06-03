@@ -1,0 +1,202 @@
+@import '../../../../styles/common.css';
+
+.section {
+  width: 100%;
+  overflow: hidden;
+}
+
+.sectionContainer {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.sectionWrapper {
+  padding: var(--space-lg);
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.sectionBadge {
+  display: inline-block;
+  color: var(--color-accent);
+  font-size: var(--size-font-sm);
+  font-weight: var(--font-weight-extrabold);
+  letter-spacing: 0.8px;
+  margin-bottom: var(--space-lg);
+  text-transform: uppercase;
+  background: transparent;
+  padding: 0;
+  border: none;
+}
+
+.sectionHeading {
+  font-size: var(--size-font-lg);
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+  margin-bottom: var(--space-lg);
+  color: var(--color-black);
+  line-height: var(--line-height-snug);
+}
+
+.sectionSubheading {
+  font-size: var(--size-font-md);
+  color: var(--color-gray-label);
+  text-align: center;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: var(--line-height-relaxed);
+}
+
+/* ===== GRID LAYOUTS - MOBILE FIRST ===== */
+.gridLayout {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.gridLayout2Col {
+  grid-template-columns: 1fr;
+}
+
+.gridLayout3Col {
+  grid-template-columns: 1fr;
+}
+
+/* ===== WHY CHOOSE SECTION ===== */
+.whyChooseFeaturesSection {
+  background: var(--color-white);
+}
+
+.whyChooseFeaturesGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+}
+
+.whyChooseFeatureCard {
+  background: var(--color-white);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-sm);
+  padding: var(--space-lg);
+  text-align: center;
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.whyChooseFeatureCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-accent);
+}
+
+.whyChooseFeatureIcon {
+  font-size: var(--size-font-lg);
+  width: var(--size-48);
+  height: var(--size-48);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-lg);
+  border-radius: var(--radius-lg);
+  background: var(--color-bg-light-5);
+  color: var(--color-accent);
+}
+
+.whyChooseFeatureCardTitle {
+  font-size: var(--size-font-md);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-black);
+  margin-bottom: var(--space-md);
+  line-height: var(--line-height-snug);
+}
+
+.whyChooseFeatureCardDescription {
+  font-size: var(--size-font-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin: 0;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (min-width: 768px) {
+  .sectionWrapper {
+    padding: var(--size-32) var(--size-64);
+  }
+
+  .sectionHeading {
+    font-size: var(--size-font-xl);
+  }
+
+  .sectionSubheading {
+    font-size: var(--size-font-lg);
+    max-width: 100%;
+  }
+
+  .sectionHeader {
+    margin-bottom: var(--space-xl);
+  }
+
+  .gridLayout2Col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gridLayout3Col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .whyChooseFeaturesGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+  }
+
+  .whyChooseFeatureIcon {
+    font-size: var(--size-font-lg);
+    width: 64px;
+    height: 64px;
+  }
+
+  .whyChooseFeatureCardTitle {
+    font-size: var(--size-font-md);
+  }
+}
+
+@media (min-width: 1024px) {
+  .sectionBadge {
+    font-size: var(--size-font-md);
+    margin-bottom: var(--space-sm);
+  }
+
+  .sectionHeading {
+    font-size: var(--size-32);
+    margin-bottom: var(--space-md);
+  }
+
+  .gridLayout3Col {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .whyChooseFeaturesGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
+  }
+
+  .whyChooseFeatureIcon {
+    font-size: var(--size-font-xl);
+    width: var(--size-48);
+    height: var(--size-48);
+  }
+
+  .whyChooseFeatureCardTitle {
+    font-size: var(--size-font-lg);
+  }
+
+  .whyChooseFeatureCardDescription {
+    font-size: var(--size-font-sm);
+  }
+}

@@ -1,0 +1,147 @@
+@import '../../../../styles/common.css';
+
+/* ========================================================================== */
+/* KEY FEATURES SECTION - MOBILE FIRST ===== */
+/* ========================================================================== */
+
+.baseSection {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.sectionBgWhite {
+  background: var(--color-white);
+  padding: var(--space-10) var(--space-lg);
+}
+
+.keyFeaturesRow {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-10);
+  align-items: center;
+}
+
+.keyFeatureCard {
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--space-6);
+  padding: 0 var(--space-md);
+  width: 100%;
+  max-width: 280px;
+  border: none;
+  transition: none;
+}
+
+.keyFeatureIcon {
+  width: var(--size-80);
+  height: var(--size-80);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-purple) 100%);
+  color: var(--color-white);
+  flex-shrink: 0;
+}
+
+.keyFeatureText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.keyFeatureTitle {
+  font-size: var(--font-size-lg);
+  line-height: 1.3;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-dark);
+  margin: 0;
+  text-align: center;
+}
+
+.keyFeatureDesc {
+  font-size: var(--font-size-md);
+  color: var(--color-gray);
+  line-height: 1.6;
+  text-align: center;
+  font-weight: var(--font-weight-normal);
+  margin: 0;
+}
+
+/* ========================================================================== */
+/* RESPONSIVE BREAKPOINTS - MOBILE FIRST ===== */
+/* ========================================================================== */
+
+/* TABLET - 768px and above */
+@media (min-width: 768px) {
+  .sectionBgWhite {
+    padding: var(--space-10) var(--space-lg);
+  }
+
+  .keyFeaturesRow {
+    flex-direction: row;
+    gap: var(--space-8);
+    justify-content: center;
+  }
+
+  .keyFeatureCard {
+    max-width: 280px;
+    gap: var(--space-6);
+  }
+
+  .keyFeatureIcon {
+    width: var(--size-80);
+    height: var(--size-80);
+    font-size: 2.5rem;
+  }
+
+  .keyFeatureTitle {
+    font-size: var(--font-size-lg);
+  }
+}
+
+/* DESKTOP - 1024px and above */
+@media (min-width: 1024px) {
+  .baseSection {
+    min-height: auto;
+  }
+
+  .sectionBgWhite {
+    padding: var(--space-10) var(--space-lg);
+  }
+
+  .keyFeaturesRow {
+    flex-direction: row;
+    justify-content: center;
+    gap: var(--space-10);
+  }
+
+  .keyFeatureCard {
+    max-width: 300px;
+    padding: 0 var(--space-md);
+    gap: var(--space-6);
+  }
+
+  .keyFeatureIcon {
+    width: var(--size-80);
+    height: var(--size-80);
+    font-size: 2.5rem;
+  }
+
+  .keyFeatureTitle {
+    font-size: var(--font-size-lg);
+  }
+}

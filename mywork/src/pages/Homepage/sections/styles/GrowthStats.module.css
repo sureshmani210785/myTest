@@ -1,0 +1,128 @@
+@import '../../../../styles/common.css';
+
+/* ========================================================================== */
+/* GROWTH STATS SECTION - MOBILE FIRST ===== */
+/* ========================================================================== */
+
+.baseSection {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.sectionBgLight {
+  background: var(--color-bg-light-3);
+  padding: var(--space-10) var(--space-lg);
+}
+
+.growthStatsCard {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: var(--space-7) var(--space-6);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--space-6);
+}
+
+.growthStat {
+  flex: 1 1 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0;
+  border-top: 2px solid var(--color-border-light);
+  padding-top: var(--space-6);
+}
+
+.growthStat:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.growthStatValue {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-4);
+  letter-spacing: var(--letter-spacing-tight);
+  line-height: var(--line-height-tight);
+}
+
+.growthStatValue.purple {
+  color: var(--color-purple);
+}
+
+.growthStatValue.pink {
+  color: var(--color-pink);
+}
+
+.growthStatValue.red {
+  color: var(--color-red);
+}
+
+.growthStatLabel {
+  font-size: var(--font-size-md);
+  color: var(--color-gray);
+  line-height: var(--line-height-relaxed);
+  text-align: center;
+  font-weight: var(--font-weight-normal);
+  margin-top: 0;
+}
+
+/* ========================================================================== */
+/* RESPONSIVE BREAKPOINTS - MOBILE FIRST ===== */
+/* ========================================================================== */
+
+/* TABLET - 768px and above */
+@media (min-width: 768px) {
+  .sectionBgLight {
+    padding: var(--space-10) var(--space-lg);
+  }
+
+  .growthStatsCard {
+    flex-direction: row;
+    gap: 0;
+    padding: var(--space-8) var(--space-10);
+  }
+
+  .growthStat {
+    border-top: none;
+    border-right: 2px solid var(--color-border-light);
+    padding: 0 var(--space-6);
+    padding-top: 0;
+  }
+
+  .growthStat:last-child {
+    border-right: none;
+  }
+
+  .growthStatValue {
+    font-size: var(--font-size-2xl);
+  }
+}
+
+/* DESKTOP - 1024px and above */
+@media (min-width: 1024px) {
+  .sectionBgLight {
+    padding: var(--space-10) var(--space-lg);
+  }
+
+  .growthStatsCard {
+    padding: var(--space-8) 0;
+    max-width: var(--width-1240);
+    margin: 0 auto;
+  }
+
+  .growthStatValue {
+    font-size: var(--font-size-3xl);
+  }
+}

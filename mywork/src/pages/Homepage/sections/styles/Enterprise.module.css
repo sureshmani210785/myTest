@@ -1,0 +1,322 @@
+@import '../../../../styles/common.css';
+
+/* ========================================================================== */
+/* ENTERPRISE SECTION - MOBILE FIRST ===== */
+/* ========================================================================== */
+
+.enterpriseStatsRow {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--space-lg);
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.enterpriseStatCard {
+  flex: 1 1 100%;
+  width: 100%;
+  max-width: 100%;
+  background: var(--color-bg-light-3);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-7) var(--space-6);
+  box-sizing: border-box;
+}
+
+.enterpriseStatBlue {
+  background: var(--stat-bg-blue);
+}
+
+.enterpriseStatGreen {
+  background: var(--stat-bg-green);
+}
+
+.enterpriseStatPurple {
+  background: var(--stat-bg-purple);
+}
+
+.enterpriseStatValue {
+  font-size: var(--font-size-5xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-4);
+  letter-spacing: var(--letter-spacing-tight);
+  line-height: var(--line-height-tight);
+}
+
+.enterpriseStatDark {
+  color: var(--color-dark);
+}
+
+.enterpriseStatGreenText {
+  color: var(--color-green);
+}
+
+.enterpriseStatPurpleText {
+  color: var(--color-purple);
+}
+
+.enterpriseStatLabel {
+  font-size: var(--font-size-md);
+  color: var(--color-gray);
+  font-weight: var(--font-weight-medium);
+  text-align: center;
+  line-height: var(--line-height-relaxed);
+}
+
+.enterpriseSection {
+  width: 100%;
+  background: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+/* Note: .sectionHeading is now defined in common.css */
+
+.sectionSubheading {
+  font-size: var(--font-size-md);
+  color: var(--color-gray);
+  text-align: center;
+  margin: 0 0 var(--space-8) 0;
+  max-width: 100%;
+  line-height: var(--line-height-relaxed);
+  font-weight: var(--font-weight-normal);
+}
+
+.enterpriseHeader {
+  text-align: center;
+  margin-bottom: var(--space-10);
+  max-width: 100%;
+  padding: 0 var(--space-lg);
+  box-sizing: border-box;
+  padding-top: var(--space-10);
+}
+
+.enterpriseSubtitle {
+  font-size: var(--font-size-md);
+  color: var(--color-gray);
+  line-height: var(--line-height-relaxed);
+  font-weight: var(--font-weight-normal);
+}
+
+.enterpriseContentRow {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin: 0 auto var(--space-10);
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.enterpriseLeftCol {
+  flex: 1 1 100%;
+  max-width: 100%;
+}
+
+.enterpriseWhyTitle {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-dark);
+  margin-bottom: var(--space-7);
+  letter-spacing: var(--letter-spacing-tight);
+  text-align: left;
+  margin-top: 0;
+  line-height: var(--line-height-normal);
+}
+
+.enterpriseFeatureList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-7);
+}
+
+.enterpriseFeature {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-lg);
+}
+
+.enterpriseFeatureIcon {
+  width: var(--size-64);
+  height: var(--size-64);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: var(--color-bg-light-3);
+  font-size: var(--size-32);
+}
+
+.featureBgBlue {
+  background: var(--icon-bg-blue);
+  color: var(--icon-color-dark);
+}
+
+.featureBgGreen {
+  background: var(--icon-bg-green);
+  color: var(--icon-color-dark);
+}
+
+.featureBgPurple {
+  background: var(--icon-bg-purple);
+  color: var(--icon-color-dark);
+}
+
+.featureBgGold {
+  background: var(--icon-bg-gold);
+  color: var(--icon-color-dark);
+}
+
+.enterpriseFeatureTitle {
+  font-size: var(--font-size-1);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-dark);
+  margin-bottom: var(--space-xs);
+  letter-spacing: var(--letter-spacing-normal);
+  margin-top: 0;
+  line-height: var(--line-height-normal);
+  text-align: left;
+}
+
+.enterpriseFeatureDesc {
+  font-size: var(--font-size-md);
+  color: var(--color-gray);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-relaxed);
+  text-align: left;
+}
+
+.enterpriseRightCol {
+  flex: 1 1 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.enterpriseTrustedCard {
+  background:var(--stat-bg-blue);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-7) var(--space-lg) var(--space-lg) var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.enterpriseTrustedTitle {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-dark);
+  margin-bottom: var(--space-2xl);
+  text-align: center;
+  letter-spacing: var(--letter-spacing-normal);
+  margin-top: 0;
+  line-height: var(--line-height-normal);
+}
+
+.enterpriseCompaniesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  margin-bottom: var(--space-2xl);
+  gap: var(--space-lg);
+}
+
+.enterpriseCompanyCell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--size-80);
+  width: 100%;
+  background: var(--color-white);
+  margin: 0;
+  border-radius: var(--radius-sm);
+  font-size: var(--size-40);
+}
+
+.enterpriseDemoText {
+  font-size: var(--font-size-lg);
+  color: var(--color-white);
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+  margin-top: var(--space-2xl);
+  padding: var(--space-6) var(--space-9);
+  background: #5568d3;
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  border: none;
+  display: inline-block;
+  min-width: 250px;
+}
+
+.enterpriseDemoText:hover {
+  background: #4557c0;
+  opacity: 1;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(85, 104, 211, 0.3);
+}
+
+/* ========================================================================== */
+/* RESPONSIVE BREAKPOINTS - MOBILE FIRST ===== */
+/* ========================================================================== */
+
+/* TABLET - 768px and above */
+@media (min-width: 768px) {
+  .enterpriseContentRow {
+    flex-direction: row;
+    gap: var(--space-4);
+    align-items: flex-start;
+  }
+
+  .enterpriseLeftCol,
+  .enterpriseRightCol {
+    flex: 1 1 50%;
+  }
+
+  .enterpriseStatsRow {
+    flex-direction: row;
+    gap: var(--space-lg);
+  }
+
+  .enterpriseStatCard {
+    flex: 1 1 auto;
+  }
+
+  .enterpriseMainTitle {
+    font-size: var(--font-size-2xl);
+  }
+}
+
+/* DESKTOP - 1024px and above */
+@media (min-width: 1024px) {
+  .enterpriseContentRow {
+    max-width: var(--width-1240);
+  }
+
+  .enterpriseLeftCol {
+    max-width: 500px;
+  }
+
+  .enterpriseStatsRow {
+    max-width: var(--width-1240);
+    margin: 0 auto;
+  }
+
+  .enterpriseStatCard {
+    max-width: var(--width-lg);
+    flex: 1 1 auto;
+  }
+}

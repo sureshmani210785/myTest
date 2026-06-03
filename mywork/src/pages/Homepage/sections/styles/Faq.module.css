@@ -1,0 +1,165 @@
+@import '../../../../styles/common.css';
+
+/* ========================================================================== */
+/* FAQ SECTION - MOBILE FIRST ===== */
+/* ========================================================================== */
+
+.baseSection {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.sectionBgWhite {
+  background: var(--color-white);
+  padding: var(--space-10) var(--space-lg);
+}
+
+.faqSectionBg {
+  width: 100%;
+  background: var(--color-bg-light-3);
+  padding: var(--space-10) var(--space-lg);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+/* Note: .sectionHeading is now defined in common.css */
+
+.faqSectionInner {
+  margin: 0 auto;
+}
+
+.faqList {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.faqItem {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border-light);
+  box-shadow: var(--shadow-xs);
+  padding: var(--space-6);
+  transition: box-shadow var(--transition-fast);
+}
+
+.faqItem:hover {
+  box-shadow: var(--shadow-sm);
+}
+
+.faqQuestion {
+  width: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-dark);
+  padding: 0;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  border-radius: var(--radius-lg);
+  transition: background var(--transition-fast);
+  gap: var(--space-4);
+}
+
+.faqQuestionText {
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-base);
+  color: var(--color-dark);
+  line-height: var(--line-height-snug);
+}
+
+.faqArrowOpen {
+  color: var(--color-accent);
+  transform: rotate(180deg);
+  transition: transform var(--transition-slow), color var(--transition-slow);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-lg);
+}
+
+.faqArrow {
+  color: var(--color-accent);
+  transform: rotate(0deg);
+  transition: transform var(--transition-fast), color var(--transition-fast);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-lg);
+}
+
+.faqAnswer {
+  padding: var(--space-6) 0 0 0;
+  color: var(--color-gray);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-relaxed);
+  animation: slideDown var(--transition-fast) ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========================================================================== */
+/* RESPONSIVE BREAKPOINTS - MOBILE FIRST ===== */
+/* ========================================================================== */
+
+/* TABLET - 768px and above */
+@media (min-width: 768px) {
+  .faqList {
+  max-width: var(--width-lg);
+  margin: 0 auto;
+  width: 100%;
+  }
+  /* Note: .sectionHeading media queries are now in common.css */
+
+  .faqQuestion {
+    font-size: var(--font-size-lg);
+  }
+
+  .faqQuestionText {
+    font-size: var(--font-size-lg);
+  }
+}
+
+/* DESKTOP - 1024px and above */
+@media (min-width: 1024px) {
+  .faqItem {
+    padding: var(--space-8);
+  }
+
+  .faqQuestion {
+    font-size: var(--font-size-lg);
+  }
+
+  .faqAnswer {
+    font-size: var(--font-size-base);
+  }
+}
+

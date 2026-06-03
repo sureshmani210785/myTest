@@ -1,0 +1,131 @@
+@import '../../../../styles/common.css';
+
+/* ========================================================================== */
+/* BATCHES SECTION - MOBILE FIRST ===== */
+/* ========================================================================== */
+
+.batchesSection {
+  width: 100%;
+  background: var(--color-bg-light-3);
+  padding: var(--space-10) var(--space-lg);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+
+
+.batchesRow {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-lg);
+  width: 100%;
+}.batchCard {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: var(--space-7) var(--space-6);
+  width: 100%;
+  flex: 1 1 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 0;
+  border-top: 5px solid transparent;
+  transition: box-shadow var(--transition-fast);
+  box-sizing: border-box;
+}
+
+.batchCard:hover {
+  box-shadow: var(--shadow-md-accent);
+}
+
+.batchType {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-wide);
+  margin-bottom: var(--size-10);
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.batchDate {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-dark);
+  margin-bottom: var(--space-sm);
+  line-height: var(--line-height-normal);
+}
+
+.batchTime {
+  font-size: var(--font-size-lg);
+  color: var(--color-gray);
+  margin-bottom: var(--space-7);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-relaxed);
+}
+
+.batchBtn {
+  width: 100%;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: var(--space-md) 0;
+  color: var(--color-white);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  cursor: pointer;
+  margin-top: var(--size-14);
+  background: linear-gradient(90deg, var(--color-purple) 0%, var(--color-pink) 100%);
+  box-shadow: var(--shadow-sm-accent);
+  transition: var(--transition-fast);
+}
+
+.batchBtn:hover {
+  opacity: 0.92;
+  box-shadow: var(--shadow-md-accent);
+}
+
+/* ========================================================================== */
+/* RESPONSIVE BREAKPOINTS - MOBILE FIRST ===== */
+/* ========================================================================== */
+
+/* TABLET - 768px and above */
+@media (min-width: 768px) {
+  .batchesRow {
+    flex-direction: row;
+    gap: var(--space-lg);
+    justify-content: space-between;
+  }
+
+  .batchCard {
+    flex: 1 1 auto;
+    max-width: none;
+  }
+}
+
+/* DESKTOP - 1024px and above */
+@media (min-width: 1024px) {
+  .batchesRow {
+    max-width: var(--width-1240);
+    margin: 0 auto;
+    gap: var(--space-lg);
+    justify-content: space-around;
+  }
+
+  .batchCard {
+    flex: 0 1 calc(33.333% - var(--space-lg));
+    padding: var(--space-8) var(--space-8);
+  }
+
+  .batchDate {
+    font-size: var(--font-size-2xl);
+  }
+
+  .batchTime {
+    font-size: var(--font-size-lg);
+  }
+}

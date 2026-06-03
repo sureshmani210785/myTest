@@ -1,0 +1,197 @@
+@import '../../../../styles/common.css';
+
+/* ========================================================================== */
+/* ACHIEVEMENTS SECTION - MOBILE FIRST ===== */
+/* ========================================================================== */
+
+.sectionBgLight {
+  background: var(--color-bg-light-3);
+}
+
+.achievementsSection {
+  width: 100%;
+  background: var(--color-bg-light-3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  padding-bottom: var(--space-10);
+}
+
+.achievementsContainer {
+  width: 100%;
+  background: var(--color-bg-light-3);
+  padding: 0 var(--space-lg);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding-bottom: var(--space-10);
+  padding-top: var(--space-10);
+}
+
+/* Note: .sectionHeading is now defined in common.css */
+
+.achievementsRow {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  max-width: 100%;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cardBase {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  transition: box-shadow var(--transition-fast), transform var(--transition-fast);
+}
+
+.cardBase:hover {
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-2px);
+}
+
+.achievementCard {
+  padding: var(--space-2xl) var(--space-lg);
+  width: 100%;
+  max-width: 100%;
+  flex: 1 1 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: var(--space-lg);
+  box-sizing: border-box;
+}
+
+.achievementIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--size-56);
+  height: var(--size-56);
+  flex-shrink: 0;
+  border-radius: 50%;
+  font-size: var(--font-size-3xl);
+  color: var(--color-white);
+}
+
+.iconBgGold {
+  background: var(--icon-bg-gold);
+  color: var(--icon-color-dark);
+}
+
+.iconBgBlue {
+  background: var(--icon-bg-blue);
+  color: var(--icon-color-dark);
+}
+
+.iconBgGreen {
+  background: var(--icon-bg-green);
+  color: var(--icon-color-dark);
+}
+
+.iconBgPurple {
+  background: var(--icon-bg-purple);
+  color: var(--icon-color-dark);
+}
+
+.achievementTitle {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-dark);
+  margin: 0;
+  line-height: var(--line-height-normal);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.achievementDesc {
+  font-size: var(--font-size-md);
+  color: var(--color-gray);
+  font-weight: var(--font-weight-normal);
+  margin: 0;
+  letter-spacing: var(--letter-spacing-normal);
+  line-height: var(--line-height-relaxed);
+}
+
+/* ========================================================================== */
+/* RESPONSIVE BREAKPOINTS - MOBILE FIRST ===== */
+/* ========================================================================== */
+
+/* TABLET - 768px and above */
+@media (min-width: 768px) {
+  .achievementsContainer {
+    padding-top: var(--space-10);
+    padding-bottom: var(--space-10);
+  }
+
+  /* Note: .sectionHeading media queries are now in common.css */
+
+  .achievementsRow {
+    flex-direction: row;
+    gap: var(--space-7);
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .achievementCard {
+    max-width: 280px;
+    padding: var(--space-8) var(--space-7);
+  }
+
+  .achievementIcon {
+    width: var(--size-80);
+    height: var(--size-80);
+    font-size: var(--font-size-3xl);
+  }
+
+  .achievementTitle {
+    font-size: var(--font-size-base);
+  }
+
+  .achievementDesc {
+    font-size: var(--font-size-sm);
+  }
+}
+
+/* DESKTOP - 1024px and above */
+@media (min-width: 1024px) {
+
+  /* Note: .sectionHeading media queries are now in common.css */
+
+  .achievementsRow {
+    max-width: 100%;
+    margin: 0 auto;
+    gap: 16px;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .achievementCard {
+    flex: 1;
+    padding: var(--space-10);
+  }
+
+  .achievementIcon {
+    width: var(--size-96);
+    height: var(--size-96);
+    font-size: var(--font-size-4xl);
+  }
+
+  .achievementTitle {
+    font-size: var(--font-size-lg);
+  }
+
+  .achievementDesc {
+    font-size: var(--font-size-base);
+  }
+}

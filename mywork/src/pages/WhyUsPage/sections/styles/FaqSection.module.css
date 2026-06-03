@@ -1,0 +1,141 @@
+@import '../../../../styles/common.css';
+
+.section {
+  width: 100%;
+  overflow: hidden;
+}
+
+.sectionContainer {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.faqContainer {
+  width: 100%;
+}
+
+.sectionWrapper {
+  padding: var(--space-lg);
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.sectionBadge {
+  display: inline-block;
+  color: var(--color-accent);
+  font-size: var(--size-font-sm);
+  font-weight: var(--font-weight-extrabold);
+  letter-spacing: 0.8px;
+  margin-bottom: var(--space-lg);
+  text-transform: uppercase;
+  background: transparent;
+  padding: 0;
+  border: none;
+}
+
+.sectionHeading {
+  font-size: var(--size-font-lg);
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+  margin-bottom: var(--space-lg);
+  color: var(--color-black);
+  line-height: var(--line-height-snug);
+}
+
+.sectionSubheading {
+  font-size: var(--size-font-md);
+  color: var(--color-gray-label);
+  text-align: center;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: var(--line-height-relaxed);
+}
+
+/* ===== FAQ SECTION ===== */
+.faqSection {
+  background: var(--color-white);
+}
+
+.faqGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+}
+
+.faqCard {
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg) var(--space-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border-light);
+  transition: all var(--transition-base);
+}
+
+.faqCard:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+.faqCardQuestion {
+  font-size: var(--size-font-md);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-black);
+  margin: 0 0 var(--space-md) 0;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.faqCardAnswer {
+  font-size: var(--size-font-sm);
+  color: var(--color-gray-label);
+  margin: 0;
+  line-height: 1.6;
+  text-align: left;
+  font-weight: var(--font-weight-normal);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (min-width: 768px) {
+  .sectionWrapper {
+    padding: var(--size-32) var(--size-64);
+  }
+
+  .sectionHeading {
+    font-size: var(--size-font-xl);
+  }
+
+  .sectionSubheading {
+    font-size: var(--size-font-lg);
+    max-width: 100%;
+  }
+
+  .sectionHeader {
+    margin-bottom: var(--space-xl);
+  }
+
+  .faqGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-xl);
+  }
+}
+
+@media (min-width: 1024px) {
+  .sectionBadge {
+    font-size: var(--size-font-md);
+    margin-bottom: var(--space-sm);
+  }
+
+  .sectionHeading {
+    font-size: var(--size-32);
+    margin-bottom: var(--space-md);
+  }
+
+  .faqGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-xl);
+  }
+}

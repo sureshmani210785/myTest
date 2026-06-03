@@ -1,0 +1,326 @@
+/* Global CSS Variables - All design tokens */
+:root {
+  /* ========================================================================== */
+  /* PRIMARY COLORS */
+  /* ========================================================================== */
+  --color-white: #ffffff;
+  --color-black: #1a1a1a;
+  --color-dark: #131A29;
+  --color-dark-bg: #2d2d2d;
+  --color-dark-bg-footer: #0f1419;
+  --color-inner-dark: #414142;
+
+  /* ========================================================================== */
+  /* SECONDARY COLORS */
+  /* ========================================================================== */
+  --color-gray: #7b8493;
+  --color-gray-light: #bfc6d1;
+  --color-gray-medium: #a0a0a0;
+  --color-text-secondary: #666666;
+
+  /* ========================================================================== */
+  /* ACCENT COLORS - PRIMARY BRAND */
+  /* ========================================================================== */
+  --color-accent: #d41f3d;
+  --color-accent-dark: #c41e3a;
+  --color-accent-light: #e8c658;
+  --color-accent-gold: #c9a855;
+
+  /* ========================================================================== */
+  /* STATUS COLORS */
+  /* ========================================================================== */
+  --color-red: #FF5858;
+  --color-green: #0CA678;
+  --color-purple: #A259D9;
+  --color-blue: #5568d3;
+  --color-yellow: #FFF7CC;
+  --color-pink: #F857A6;
+
+  /* ========================================================================== */
+  /* BACKGROUND & SURFACE COLORS */
+  /* ========================================================================== */
+  --color-bg-light: #f3eaff;
+  --color-bg-light-2: #f9fafb;
+  --color-bg-light-3: #f5f7fa;
+  --color-bg-light-4: linear-gradient(var(--gradient-angle-135), rgba(212, 31, 61, 0.05) 0%, rgba(212, 31, 61, 0.02) 100%);
+  --color-bg-light-5: linear-gradient(var(--gradient-angle-135), rgba(212, 31, 61, 0.08) 0%, rgba(212, 31, 61, 0.08) 100%);
+
+  /* ========================================================================== */
+  /* BORDER & DIVIDER COLORS */
+  /* ========================================================================== */
+  --color-border: #e8e8e8;
+  --color-border-light: #f0f0f0;
+  --color-border-extra-light: #f2f4f8;
+  --color-gray-border: #e5e7eb;
+  --color-gray-light-bg: #f3f4f6;
+  
+  /* Legacy color aliases */
+  --color-blue-light: var(--color-bg-light-3);
+  --color-gray-label: var(--color-gray);
+
+  /* ========================================================================== */
+  /* GRADIENT COLORS */
+  /* ========================================================================== */
+  --color-gradient-2-start: #667eea;
+  --color-gradient-2-end: #764ba2;
+  --color-gradient-4-end: #c3cfe2;
+  --color-gradient-5-start: #d41f3d;
+  --color-gradient-5-end: #a0172e;
+
+  /* ========================================================================== */
+  /* SPACING - ESSENTIAL SCALE (8px Base) */
+  /* ========================================================================== */
+  --space-0: 0;
+  --space-micro: 2px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 32px;
+  --space-8: 40px;
+  --space-9: 48px;
+  --space-10: 64px;
+  
+  /* Legacy spacing aliases for backward compatibility */
+  --space-xs: var(--space-1);
+  --space-sm: var(--space-2);
+  --space-md: var(--space-4);
+  --space-lg: var(--space-6);
+  --space-xl: var(--space-8);
+  --space-2xl: var(--space-7);
+  --space-3xl: var(--space-9);
+  --space-4xl: var(--space-10);
+
+  /* ========================================================================== */
+  /* FONT SIZES & SIZING - ESSENTIAL SCALE (Pixel-based) */
+  /* ========================================================================== */
+  --size-10: 10px;
+  --size-12: 12px;
+  --size-13: 13px;
+  --size-14: 14px;
+  --size-16: 16px;
+  --size-18: 18px;
+  --size-20: 20px;
+  --size-24: 24px;
+  --size-28: 28px;
+  --size-30: 30px;
+  --size-32: 32px;
+  --size-36: 36px;
+  --size-40: 40px;
+  --size-44: 44px;
+  --size-48: 48px;
+  --size-56: 56px;
+  --size-64: 64px;
+  --size-72: 72px;
+  --size-80: 80px;
+  --size-96: 96px;
+
+  /* Font size aliases (reference sizing scale) */
+  --font-size-xs: var(--size-12);
+  --font-size-sm: var(--size-14);
+  --font-size-base: var(--size-16);
+  --font-size-lg: var(--size-18);
+  --font-size-xl: var(--size-20);
+  --font-size-2xl: var(--size-24);
+  --font-size-3xl: var(--size-30);
+  --font-size-4xl: var(--size-36);
+  --font-size-5xl: var(--size-48);
+  
+  /* Legacy font-size aliases for backward compatibility */
+  --font-size-md: var(--size-16);
+  
+  /* Legacy --size-font-* naming convention aliases */
+  --size-font-xs: var(--size-12);
+  --size-font-sm: var(--size-12);
+  --size-font-md: var(--size-16);
+  --size-font-lg: var(--size-18);
+  --size-font-xl: var(--size-20);
+
+  /* ========================================================================== */
+  /* BORDER RADIUS - ESSENTIAL SCALE */
+  /* ========================================================================== */
+  --radius-none: 0;
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-full: 50%;
+  
+  /* Legacy aliases */
+  --radius-2xl: var(--radius-lg);
+
+  /* ========================================================================== */
+  /* CONTAINER WIDTHS - BREAKPOINTS & LAYOUTS */
+  /* ========================================================================== */
+  --width-md: 768px;
+  --width-lg: 1024px;
+  --width-xl: 1280px;
+  --width-1100: 1100px;
+  --width-1200: 1200px;
+  --width-1240: 1240px;
+
+  /* Transitions */
+  --transition-fast: 0.2s;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.6s ease;
+
+  /* Font Weights */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  /* Line Heights - Essential Only */
+  --line-height-tight: 1;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.6;
+  --line-height-loose: 1.8;
+  --line-height-snug: 1.375;
+
+  /* ========================================================================== */
+  /* COMMON LETTER SPACING - TEXT STYLES */
+  /* ========================================================================== */
+
+  --letter-spacing-tight: -0.9px;
+  --letter-spacing-normal: 0px;
+  --letter-spacing-wide: 0.8px;
+  --letter-spacing-wider: 1.3px;
+
+  /* ========================================================================== */
+  /* COMMON BORDER STYLES - COMPONENT BORDERS */
+  /* ========================================================================== */
+
+  --border-thin: 1px solid var(--color-border);
+  --border-base: 1.5px solid rgba(255, 255, 255, 0.2);
+  --border-thick: 2px solid var(--color-border);
+  --border-accent-left: 4px;
+
+  /* RGBA Colors - Accent (used for backgrounds) */
+  --color-accent-rgba-08: rgba(212, 31, 61, 0.08);
+  --color-accent-rgba-1: rgba(196, 30, 58, 0.1);
+  --color-accent-rgba-3: rgba(196, 30, 58, 0.3);
+  --color-accent-rgba-2: rgba(212, 31, 61, 0.2);
+
+  /* RGBA Colors - White (used for borders) */
+  --color-white-rgba-04: rgba(255, 255, 255, 0.4);
+  --color-white-rgba-01: rgba(255, 255, 255, 0.1);
+
+  /* RGBA Colors - Accent (used for gradients) */
+  --color-accent-rgb-gradient: rgb(207 33 53 / 0.03);
+
+  /* Blur Values */
+  --blur-sm: blur(10px);
+  --border-1-5px: 1.5px;
+
+  /* Progress Bar */
+  --progress-bar-height: 8px;
+  --progress-bar-border-radius: 4px;
+  --progress-bar-width: 60%;
+
+  /* Animation Values */
+  --animation-slideInRight: slideInRight var(--transition-slow);
+
+
+
+  /* Screenshot Container */
+  --screenshot-aspect-ratio: 9 / 11;
+  --screenshot-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  --screenshot-max-width: 450px;
+  --screenshot-min-height: 500px;
+
+  /* Gradient Angle */
+  --gradient-angle-135: 135deg;
+  --gradient-angle-90: 90deg;
+
+  /* Header Heights */
+  --header-height: 64px;
+  --header-top-strip-height: 40px;
+  --header-with-strip-height: 104px;
+
+  /* ========================================================================== */
+  /* COMMON SHADOW UTILITIES - DEPTH HIERARCHY */
+  /* ========================================================================== */
+
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 5px 20px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.2);
+  --shadow-xl: 0 12px 40px rgba(0, 0, 0, 0.25);
+  --shadow-2xl: 0 20px 60px rgba(0, 0, 0, 0.3);
+
+  /* Accent Shadows */
+  --shadow-sm-accent: 0 2px 16px rgba(160, 32, 240, 0.07);
+  --shadow-md-accent: 0 4px 12px rgba(160, 32, 240, 0.15);
+
+  /* ========================================================================== */
+  /* COMMON BACKGROUND COLORS - COMPONENT STATES */
+  /* ========================================================================== */
+
+  --bg-primary: var(--color-white);
+  --bg-secondary: var(--color-bg-light-2);
+  --bg-tertiary: var(--color-bg-light-3);
+  --bg-accent: var(--color-accent);
+  --bg-accent-light: var(--color-accent-light);
+  --bg-disabled: var(--color-gray-light-bg);
+  --bg-hover: rgba(0, 0, 0, 0.02);
+  --bg-overlay: rgba(0, 0, 0, 0.5);
+
+  /* ========================================================================== */
+  /* COMMON SPACING UTILITIES - REUSABLE PADDING & MARGIN */
+  /* ========================================================================== */
+
+  /* Generic Padding Sizes */
+  --padding-xs: 4px 8px;
+  --padding-sm: 8px 16px;
+  --padding-md: 12px 20px;
+  --padding-lg: 16px 24px;
+  --padding-xl: 20px 32px;
+  --padding-2xl: 24px 40px;
+
+  /* Generic Margin Sizes */
+  --margin-xs: 4px;
+  --margin-sm: 8px;
+  --margin-md: 16px;
+  --margin-lg: 24px;
+  --margin-xl: 32px;
+  --margin-2xl: 48px;
+
+  /* ========================================================================== */
+  /* ICON BACKGROUND COLORS - ACHIEVEMENT & FEATURE CARDS */
+  /* ========================================================================== */
+
+  --icon-bg-gold: #FFD580;
+  --icon-bg-blue: #B8D4FF;
+  --icon-bg-green: #A8E6D0;
+  --icon-bg-purple: #E6D4FF;
+  --icon-bg-pink: #FFF5F8;
+  --icon-color-dark: #1a1a1a;
+  
+  /* Capstone Card Icon Backgrounds */
+  --icon-bg-capstone-pink: #FFF4F7;
+  --icon-bg-capstone-yellow: #FFF9E6;
+  --icon-bg-capstone-purple: #F7E6FF;
+  --icon-bg-capstone-blue: #E6F7FF;
+
+  /* Stats Card Backgrounds */
+  --stat-bg-blue: #e0ecff;
+  --stat-bg-green: #c6f6d5;
+  --stat-bg-purple: #e9d8fd;
+
+  /* Brand Colors for Company Logos */
+  --brand-google: #4285F4;
+  --brand-amazon: #FF9900;
+  --brand-windows: #0078D4;
+
+  /* ========================================================================== */
+  /* TRANSFORM & TRANSITION UTILITIES */
+  /* ========================================================================== */
+
+  --transform-button-hover: translateY(-2px);
+
+}

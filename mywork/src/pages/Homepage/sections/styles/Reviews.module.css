@@ -1,0 +1,156 @@
+@import '../../../../styles/common.css';
+
+/* ========================================================================== */
+/* REVIEWS SECTION - MOBILE FIRST ===== */
+/* ========================================================================== */
+
+.baseSection {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.sectionBgPale {
+  background: var(--color-bg-light-3);
+  padding: var(--space-10) var(--space-lg);
+}
+
+/* Note: .sectionHeading is now defined in common.css */
+
+.reviewsRow {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: var(--space-4);
+  max-width: 100%;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cardBase {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition-fast), transform var(--transition-fast);
+}
+
+.reviewCard {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-8) var(--space-6);
+  width: 100%;
+  flex: 1 1 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-6);
+  transition: box-shadow var(--transition-fast), transform var(--transition-fast);
+  box-sizing: border-box;
+}
+
+.reviewCard:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(var(--transform-button-hover));
+}
+
+.reviewText {
+  font-size: var(--font-size-base);
+  color: var(--color-gray);
+  line-height: var(--line-height-relaxed);
+  text-align: left;
+  font-weight: var(--font-weight-normal);
+  margin: 0;
+}
+
+.reviewUserRow {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  width: 100%;
+}
+
+.reviewUserInfo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.reviewStars {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.reviewStars i {
+  color: #ffc107;
+  font-size: var(--font-size-lg);
+}
+
+.reviewAvatar {
+  width: var(--size-48);
+  height: var(--size-48);
+  border-radius: var(--radius-full);
+  border: 2px solid var(--color-white);
+  object-fit: cover;
+  background: var(--color-gray-light);
+  flex-shrink: 0;
+}
+
+.reviewName {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-dark);
+  margin: 0;
+  line-height: var(--line-height-tight);
+}
+
+/* ========================================================================== */
+/* RESPONSIVE BREAKPOINTS - MOBILE FIRST ===== */
+/* ========================================================================== */
+
+/* TABLET - 768px and above */
+@media (min-width: 768px) {
+  /* Note: .sectionHeading media queries are now in common.css */
+
+  .reviewsRow {
+    flex-direction: row;
+    gap: var(--space-4);
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .reviewCard {
+    max-width: 340px;
+    flex: 1 1 calc(50% - var(--space-2));
+    padding: var(--space-8) var(--space-6);
+  }
+}
+
+/* DESKTOP - 1024px and above */
+@media (min-width: 1024px) {
+  .reviewsRow {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+    justify-content: center;
+  }
+
+  .reviewCard {
+    width: calc(33.333% - var(--space-3));
+    max-width: 400px;
+    min-width: 300px;
+    flex: 0 1 auto;
+    padding: var(--space-8) var(--space-6);
+  }
+}

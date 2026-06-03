@@ -1,0 +1,202 @@
+@import '../../../../styles/common.css';
+
+/* ========================================================================== */
+/* CERTIFICATE SECTION - MOBILE FIRST ===== */
+/* ========================================================================== */
+
+.certificateSection {
+  width: 100%;
+  background: var(--color-bg-light-3);
+  padding: var(--space-10) var(--space-lg);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+/* Note: .sectionHeading is now defined in common.css */
+
+.certificateRow {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-10);
+  width: 100%;
+}
+
+.certificateImgCol {
+  flex: 1 1 100%;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.certificateImg {
+  width: 100%;
+  max-width: 100%;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  background: var(--color-white);
+  padding: 0;
+}
+
+.certificateTextCol {
+  flex: 1 1 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0;
+  min-width: 0;
+}
+
+.certificateSubtitle {
+  font-size: var(--font-size-2xl);
+  line-height: var(--line-height-snug);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-dark);
+  margin: 0 0 var(--space-5) 0;
+  text-align: left;
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.certificateDesc {
+  font-size: var(--font-size-lg);
+  color: var(--color-gray);
+  line-height: var(--line-height-relaxed);
+  text-align: left;
+  font-weight: var(--font-weight-normal);
+  margin: 0 0 var(--space-8) 0;
+  padding: 0;
+}
+
+.certificateInfoList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  width: 100%;
+}
+
+.certificateInfoCard {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  border-radius: var(--radius-md);
+  padding: var(--space-5) var(--space-6);
+  background: var(--color-white);
+  color: var(--color-dark);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.certificateInfoCard:nth-child(1) {
+  background: #eef5ff;
+}
+
+.certificateInfoCard:nth-child(2) {
+  background: #e8f9f4;
+}
+
+.certificateInfoCard:nth-child(3) {
+  background: #f3e8ff;
+}
+
+.certificateInfoIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--size-32);
+  height: var(--size-32);
+  background: transparent;
+  border-radius: var(--radius-md);
+  color: var(--color-dark);
+  font-size: var(--font-size-lg);
+  flex-shrink: 0;
+}
+
+.certificateInfoCard:nth-child(1) .certificateInfoIcon {
+  color: #2563eb;
+}
+
+.certificateInfoCard:nth-child(2) .certificateInfoIcon {
+  color: #059669;
+}
+
+.certificateInfoCard:nth-child(3) .certificateInfoIcon {
+  color: #a855f7;
+}
+
+.certificateInfoIcon i {
+  font-size: var(--size-24);
+}
+
+.certificateInfoText {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-dark);
+  line-height: var(--line-height-normal);
+}
+
+/* ========================================================================== */
+/* RESPONSIVE BREAKPOINTS - MOBILE FIRST ===== */
+/* ========================================================================== */
+
+/* TABLET - 768px and above */
+@media (min-width: 768px) {
+  .certificateRow {
+    flex-direction: row;
+    gap: var(--space-10);
+    align-items: flex-start;
+  }
+
+  .certificateImgCol {
+    flex: 1 1 50%;
+  }
+
+  .certificateTextCol {
+    flex: 1 1 50%;
+  }
+
+  .certificateSubtitle {
+    font-size: var(--font-size-2xl);
+  }
+
+  .certificateDesc {
+    font-size: var(--font-size-lg);
+  }
+}
+
+/* DESKTOP - 1024px and above */
+@media (min-width: 1024px) {
+  .certificateRow {
+    gap: var(--space-10);
+    max-width: var(--width-1240);
+    margin: 0 auto;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .certificateImgCol {
+    flex: 0 1 45%;
+  }
+
+  .certificateTextCol {
+    flex: 0 1 55%;
+    justify-content: flex-start;
+  }
+
+  .certificateSubtitle {
+    font-size: var(--font-size-2xl);
+  }
+
+  .certificateDesc {
+    font-size: var(--font-size-lg);
+  }
+
+  .certificateInfoCard {
+    gap: var(--space-5);
+  }
+}

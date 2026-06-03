@@ -1,0 +1,263 @@
+@import '../../../../styles/common.css';
+
+/* ========================================================================== */
+/* BRANCHES SECTION - MOBILE FIRST ===== */
+/* ========================================================================== */
+
+.branchesSection {
+  width: 100%;
+  background: var(--color-bg-light-3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  padding-bottom: var(--space-10);
+}
+
+.branchesContainer {
+  width: 100%;
+  background:var(--color-bg-light-3);
+  padding: 0 var(--space-lg);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding-bottom: var(--space-10);
+  padding-top: var(--space-10);
+}
+
+/* Note: .sectionHeading is now defined in common.css */
+
+.sectionSubheading {
+  font-size: var(--font-size-md);
+  color: var(--color-gray);
+  text-align: center;
+  margin: 0 0 var(--space-8) 0;
+  max-width: 100%;
+  line-height: var(--line-height-relaxed);
+  font-weight: var(--font-weight-normal);
+  box-sizing: border-box;
+}
+
+.branchesGrid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+  max-width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.branchCard {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: var(--space-9) var(--space-6) var(--space-7) var(--space-6);
+  width: 100%;
+  max-width: 100%;
+  flex: 1 1 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  margin-bottom: 0;
+  transition: box-shadow var(--transition-fast), transform var(--transition-fast);
+  box-sizing: border-box;
+  gap: var(--space-sm);
+}
+
+.branchCard:hover {
+  box-shadow: var(--shadow-lg);
+  transform: var(--transform-button-hover);
+}
+
+.branchIconCircle {
+  width: var(--size-56);
+  height: var(--size-56);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-md);
+  flex-shrink: 0;
+}
+
+.branchIconGray {
+  background: var(--color-bg-light-3);
+}
+
+.branchIconGreen {
+  background: var(--stat-bg-green);
+}
+
+.branchIconPurple {
+  background: var(--stat-bg-purple);
+}
+
+.branchIconRed {
+  background: #FFE5E5;
+}
+
+.branchIconBlue {
+  background: #E5F0FF;
+}
+
+.branchIconPink {
+  background: #FFE5F5;
+}
+
+.branchName {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-dark);
+  margin-bottom: var(--space-2);
+  margin-top: 0;
+  line-height: var(--line-height-normal);
+}
+
+.branchAddress {
+  font-size: var(--font-size-md);
+  color: var(--color-gray);
+  line-height: var(--line-height-relaxed);
+}
+
+.branchContactRow {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+
+.branchContactIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: var(--font-size-lg);
+}
+
+.branchContactText {
+  font-size: var(--font-size-md);
+  color: var(--color-gray);
+}
+
+.branchBtn {
+  margin-top: var(--size-18);
+  width: 100%;
+  padding: var(--space-sm) 0;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--size-10);
+  cursor: pointer;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.branchBtnGray {
+  background: var(--color-bg-light-3);
+  color: var(--color-dark);
+}
+
+.branchBtnGreen {
+  background: var(--stat-bg-green);
+  color: var(--color-green);
+}
+
+.branchBtnPurple {
+  background: var(--stat-bg-purple);
+  color: var(--color-purple);
+}
+
+.branchBtnRed {
+  background: #FFE5E5;
+  color: var(--color-red);
+}
+
+.branchBtnBlue {
+  background: #E5F0FF;
+  color: var(--color-blue);
+}
+
+.branchBtnPink {
+  background: #FFE5F5;
+  color: var(--color-pink);
+}
+
+.branchBtnIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-sm);
+}
+
+/* ========================================================================== */
+/* RESPONSIVE BREAKPOINTS - MOBILE FIRST ===== */
+/* ========================================================================== */
+
+/* TABLET - 768px and above */
+@media (min-width: 768px) {
+  .branchesGrid {
+    flex-direction: row;
+    gap: var(--space-7);
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .branchCard {
+    padding: var(--space-8) var(--space-7);
+  }
+
+  .branchIconCircle {
+    width: var(--size-56);
+    height: var(--size-56);
+  }
+
+  .branchName {
+    font-size: var(--font-size-base);
+  }
+
+  .branchAddress {
+    font-size: var(--font-size-sm);
+  }
+}
+
+/* DESKTOP - 1024px and above */
+@media (min-width: 1024px) {
+
+  .branchesGrid {
+    max-width: 100%;
+    margin: 0 auto;
+    gap: 16px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+  }
+
+  .branchCard {
+    flex: 1;
+  }
+
+  .branchIconCircle {
+    width: var(--size-56);
+    height: var(--size-56);
+  }
+
+  .branchName {
+    font-size: var(--font-size-lg);
+  }
+
+  .branchAddress {
+    font-size: var(--font-size-base);
+  }
+}

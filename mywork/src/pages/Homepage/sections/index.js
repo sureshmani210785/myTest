@@ -1,0 +1,17 @@
+export { default as HeroSection } from './HeroSection';
+export { default as KeyFeatures } from './KeyFeatures';
+export { default as GrowthStats } from './GrowthStats';
+export { default as JourneySteps } from './JourneySteps';
+export { default as Batches } from './Batches';
+export { default as Overview } from './Overview';
+export { default as Certificate } from './Certificate';
+export { default as Skills } from './Skills';
+export { default as Tools } from './Tools';
+export { default as Capstone } from './Capstone';
+export { default as Reviews } from './Reviews';
+export { default as Faq } from './Faq';
+export { default as CareerFaq } from './CareerFaq';
+export { default as BasicFaq } from './BasicFaq';
+export { default as Achievements } from './Achievements';
+export { default as Enterprise } from './Enterprise';
+export { default as Branches } from './Branches';

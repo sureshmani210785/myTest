@@ -1,0 +1,132 @@
+@import '../../../../styles/common.css';
+
+/* ========================================================================== */
+/* JOURNEY STEPS SECTION - MOBILE FIRST ===== */
+/* ========================================================================== */
+
+.journeyStepsSection {
+  width: 100%;
+  background: var(--color-white);
+  padding: var(--space-10) var(--space-lg);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.journeyStepsRow {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  width: 100%;
+  max-width: 100%;
+}
+
+.journeyStepCard {
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--space-lg);
+  padding: 0 var(--space-sm);
+  width: 100%;
+  flex: 1 1 100%;
+  border: none;
+  transition: none;
+}
+
+.journeyStepCircle {
+  width: var(--size-56);
+  height: var(--size-56);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-white);
+  margin-top: 0;
+  box-shadow: var(--shadow-sm-accent);
+  background: var(--color-purple);
+}
+
+.journeyStepText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.journeyStepTitle {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-dark);
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.journeyStepDesc {
+  font-size: var(--font-size-md);
+  color: var(--color-gray);
+  line-height: var(--line-height-relaxed);
+  text-align: center;
+  font-weight: var(--font-weight-normal);
+  margin-top: 0;
+}
+
+/* ========================================================================== */
+/* RESPONSIVE BREAKPOINTS - MOBILE FIRST ===== */
+/* ========================================================================== */
+
+/* TABLET - 768px and above */
+@media (min-width: 768px) {
+  .journeyStepsRow {
+    flex-direction: row;
+    gap: 0;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .journeyStepCard {
+    padding: 0 var(--space-6);
+    flex: 1 1 auto;
+    max-width: none;
+  }
+
+  .journeyStepCircle {
+    width: var(--size-64);
+    height: var(--size-64);
+    font-size: var(--font-size-xl);
+  }
+}
+
+/* DESKTOP - 1024px and above */
+@media (min-width: 1024px) {
+  .journeyStepsSection {
+    padding: var(--space-10) var(--space-lg);
+  }
+
+  .journeyStepsRow {
+    max-width: var(--width-1240);
+    margin: 0 auto;
+    gap: 0;
+    justify-content: space-around;
+  }
+
+  .journeyStepCard {
+    padding: 0 var(--space-6);
+    flex: 0 1 auto;
+  }
+
+  .journeyStepCircle {
+    width: var(--size-80);
+    height: var(--size-80);
+    font-size: var(--font-size-xl);
+  }
+}

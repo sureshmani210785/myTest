@@ -1,0 +1,215 @@
+@import '../../../../styles/common.css';
+
+.section {
+  width: 100%;
+  overflow: hidden;
+}
+
+.sectionContainer {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.sectionWrapper {
+  padding: var(--space-lg);
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.sectionBadge {
+  display: inline-block;
+  color: var(--color-accent);
+  font-size: var(--size-font-sm);
+  font-weight: var(--font-weight-extrabold);
+  letter-spacing: 0.8px;
+  margin-bottom: var(--space-lg);
+  text-transform: uppercase;
+  background: transparent;
+  padding: 0;
+  border: none;
+}
+
+.sectionHeading {
+  font-size: var(--size-font-lg);
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+  margin-bottom: var(--space-lg);
+  color: var(--color-black);
+  line-height: var(--line-height-snug);
+}
+
+.sectionSubheading {
+  font-size: var(--size-font-md);
+  color: var(--color-gray-label);
+  text-align: center;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: var(--line-height-relaxed);
+}
+
+.gridLayout2Col {
+  grid-template-columns: 1fr;
+}
+
+/* ===== TRAINING SECTION ===== */
+.trainingSection {
+  background: var(--color-white);
+}
+
+.trainingGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+}
+
+.trainingCard {
+  background: var(--color-white);
+  border-left: var(--space-sm) solid var(--color-accent);
+  padding: var(--space-lg) var(--space-lg);
+  text-align: left;
+  transition: all var(--transition-base);
+  position: relative;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+}
+
+.trainingCard:nth-child(even) {
+  border-left-color: var(--color-accent-gold);
+}
+
+.trainingCard:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.trainingCardHeader {
+  display: flex;
+  gap: var(--space-lg);
+  align-items: flex-start;
+}
+
+.trainingIcon {
+  font-size: var(--size-font-lg);
+  margin-bottom: var(--space-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg-light-5);
+  width: var(--size-48);
+  height: var(--size-48);
+  border-radius: var(--radius-lg);
+  flex-shrink: 0;
+}
+
+.trainingCard:nth-child(odd) .trainingIcon {
+  background: var(--color-accent);
+  color: var(--color-white);
+}
+
+.trainingCard:nth-child(even) .trainingIcon {
+  background: var(--color-accent-gold);
+  color: var(--color-white);
+}
+
+.trainingCardTitle {
+  flex: 1;
+}
+
+.projectTitle {
+  font-size: var(--size-font-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-black);
+  margin: 0 0 var(--space-sm) 0;
+  line-height: var(--line-height-snug);
+}
+
+.projectSubtitle {
+  font-size: var(--size-font-sm);
+  color: var(--color-gray-label);
+  margin: 0;
+  font-weight: var(--font-weight-normal);
+}
+
+.projectDescription {
+  font-size: var(--size-font-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--space-md);
+}
+
+.projectHighlights {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.highlightItem {
+  color: var(--color-gray-label);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--size-font-sm);
+}
+
+.checkmark {
+  color: var(--color-accent-gold);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--size-font-md);
+  margin-right: var(--space-sm);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (min-width: 768px) {
+  .sectionWrapper {
+    padding: var(--size-32) var(--size-64);
+  }
+
+  .sectionHeading {
+    font-size: var(--size-font-xl);
+  }
+
+  .sectionSubheading {
+    font-size: var(--size-font-lg);
+    max-width: 100%;
+  }
+
+  .sectionHeader {
+    margin-bottom: var(--space-xl);
+  }
+
+  .gridLayout2Col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .trainingGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-xl);
+  }
+}
+
+@media (min-width: 1024px) {
+  .projectTitle {
+    font-size: var(--size-font-xl);
+  }
+
+  .projectSubtitle {
+    font-size: var(--size-font-md);
+  }
+
+  .sectionBadge {
+    font-size: var(--size-font-md);
+    margin-bottom: var(--space-sm);
+  }
+
+  .sectionHeading {
+    font-size: var(--size-32);
+    margin-bottom: var(--space-md);
+  }
+
+  .trainingGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-xl);
+  }
+}
